@@ -7,15 +7,15 @@ using System.Web.Http;
 
 namespace LoginFunction.Controllers
 {
-    [Authorize]
+    [Authorize(Roles="Admin")]
     public class EmployeesController : ApiController
     {
-        public IEnumerable<TBL_EMPLOYEES> Get()
-        {
-            using (dbNEVSEntities entities = new dbNEVSEntities())
-            {
-                return entities.TBL_EMPLOYEES.ToList();
-            }
-        }
+        //public IEnumerable<TBL_EMPLOYEES> Get()
+        //{
+        //    using (dbNEVSEntities entities = new dbNEVSEntities())
+        //    {
+        //        return entities.TBL_EMPLOYEES.ToList();
+        //    }
+        //}
     }
 }
